@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
+  // console.log(props.navigation);
   return (
     <View>
       <Text style={styles.textStyle}>
@@ -10,12 +11,13 @@ const HomeScreen = () => {
       <Button
         title='Go to Components Demo'
         onPress={() => {
-          console.log('button pressed');
+          navigation.navigate('Components');
         }}
       />
       <TouchableOpacity
+        style={styles.buttonStyle}
         onPress={() => {
-          console.log('list pressed');
+          navigation.navigate('List');
         }}
       >
         <Text>Go to List Demo</Text>
@@ -28,7 +30,10 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: 30,
   },
-  buttonStyle: {},
+  buttonStyle: {
+    backgroundColor: 'red',
+    height: 40,
+  },
 });
 
 export default HomeScreen;
