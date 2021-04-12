@@ -3,16 +3,17 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 
 const ListScreen = () => {
   const friends = [
-    { name: 'Michelle', key: '1' },
-    { name: 'Blake', key: '2' },
-    { name: 'Tracie', key: '3' },
-    { name: 'Syd', key: '4' },
-    { name: 'Meks', key: '5' },
-    { name: 'Shannon', key: '6' },
-    { name: 'Janna', key: '7' },
+    { name: 'Michelle' },
+    { name: 'Blake' },
+    { name: 'Tracie' },
+    { name: 'Syd' },
+    { name: 'Meks' },
+    { name: 'Shannon' },
+    { name: 'Janna' },
   ];
   return (
     <FlatList
+      keyExtractor={(friend) => friend.name}
       data={friends}
       renderItem={({ item }) => {
         return <Text>{item.name}</Text>;
