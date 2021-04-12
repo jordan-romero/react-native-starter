@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, Button } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
 const HomeScreen = () => {
   return (
@@ -13,6 +13,13 @@ const HomeScreen = () => {
           console.log('button pressed');
         }}
       />
+      <TouchableOpacity
+        onPress={() => {
+          console.log('list pressed');
+        }}
+      >
+        <Text>Go to List Demo</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -21,6 +28,7 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: 30,
   },
+  buttonStyle: {},
 });
 
 export default HomeScreen;
