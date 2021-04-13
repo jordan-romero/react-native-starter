@@ -14,6 +14,12 @@ const HomeScreen = ({ navigation }) => {
           navigation.navigate('Components');
         }}
       />
+      <Button
+        title='Go to Counter Demo'
+        onPress={() => {
+          navigation.navigate('Counter');
+        }}
+      />
       <TouchableOpacity
         style={styles.buttonStyle}
         onPress={() => {
