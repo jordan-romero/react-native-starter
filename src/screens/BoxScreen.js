@@ -17,9 +17,14 @@ const styles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: 'black',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    height: 200,
+    alignItems: 'center',
   },
   textStyle: {
     borderWidth: 3,
     borderColor: 'red',
+    margin: 20,
   },
 });
